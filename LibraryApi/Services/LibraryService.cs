@@ -29,9 +29,9 @@ namespace LibraryApi.Services
             return _repo.GetAllBooks();
         }
 
-        public IEnumerable<PersonDTO> GetAllPersons()
+        public IEnumerable<PersonDTO> GetAllUsers()
         {
-            return _repo.GetAllPersons();
+            return _repo.GetAllUsers();
         }
     }
 }
