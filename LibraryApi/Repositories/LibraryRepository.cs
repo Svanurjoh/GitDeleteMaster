@@ -5,6 +5,7 @@ using LibraryApi.Models.EntityModels;
 using Newtonsoft.Json;
 using System.Linq;
 using LibraryApi.Models.DTOModels;
+using LibraryApi.Models.ViewModels;
 
 namespace LibraryApi.Repositories
 {
@@ -102,6 +103,8 @@ namespace LibraryApi.Repositories
             return false;                      
         }
 
+        //Books
+
         public IEnumerable<BookDTO> GetAllBooks()
         {
             var books = (from b in _db.Books
@@ -114,7 +117,52 @@ namespace LibraryApi.Repositories
             return books;
         }
 
-        public IEnumerable<PersonDTO> GetAllPersons()
+        public BookDTO GetBookById(int bookId)
+        {
+            var book = (from b in _db.Books
+                        where bookId == b.Id
+                        select new BookDTO{
+                            Title = b.Title,
+                            AuthorFirstName = b.AuthorFirstName,
+                            AuthorLastName = b.AuthorLastName,
+                            PublishDate = b.PublishDate,
+                            ISBN = b.ISBN
+                        }).SingleOrDefault();
+            return book;
+        }
+
+        public void AddBook(BookViewModel newBook)
+        {
+            var book = new Book{
+                Title = newBook.Title,
+                AuthorFirstName = newBook.AuthorFirstName,
+                AuthorLastName = newBook.AuthorLastName,
+                PublishDate = newBook.ReleaseDate,
+                ISBN = newBook.ISBN
+            };
+            _db.Add(book);
+            _db.SaveChanges();
+        }
+
+        public void DeleteBookById(int bookId)
+        {
+            var book = (from b in _db.Books
+                        where bookId == b.Id
+                        select new Book{
+                            Id = b.Id,
+                            Title = b.Title,
+                            AuthorFirstName = b.AuthorFirstName,
+                            AuthorLastName = b.AuthorLastName,
+                            PublishDate = b.PublishDate,
+                            ISBN = b.ISBN
+                        }).SingleOrDefault();
+            _db.Remove(book);
+            _db.SaveChanges();
+        }
+
+        //Users
+
+        public IEnumerable<PersonDTO> GetAllUsers()
         {
             var persons = (from p in _db.Persons
                            select new PersonDTO{
@@ -123,6 +171,6 @@ namespace LibraryApi.Repositories
                             Address = p.Address,
                             Email = p.Email}).ToList();
             return persons;
-        } 
+        }
     }
 }

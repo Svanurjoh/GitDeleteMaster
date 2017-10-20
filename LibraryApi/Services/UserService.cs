@@ -18,9 +18,9 @@ namespace LibraryApi.Services
         {
             _repo.PersonsLoadJson();
         }
-        public IEnumerable<PersonDTO> GetAllPersons()
+        public IEnumerable<PersonDTO> GetAllUsers()
         {
-            return _repo.GetAllPersons();
+            return _repo.GetAllUsers();
         }
     }
 }

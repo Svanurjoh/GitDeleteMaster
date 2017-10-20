@@ -7,6 +7,6 @@ namespace LibraryApi.Services
     public interface IUserService
     {
         void PersonsLoadJson();
-        IEnumerable<PersonDTO> GetAllPersons();
+        IEnumerable<PersonDTO> GetAllUsers();
     }
 }

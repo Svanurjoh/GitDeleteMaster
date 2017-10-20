@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using LibraryApi.Models.DTOModels;
+using LibraryApi.Models.ViewModels;
 
 namespace LibraryApi.Repositories
 {
@@ -8,6 +9,10 @@ namespace LibraryApi.Repositories
         void PersonsLoadJson();
         void BooksLoadJson();
         IEnumerable<BookDTO> GetAllBooks();
-        IEnumerable<PersonDTO> GetAllPersons();
+        BookDTO GetBookById(int bookId);
+        void AddBook(BookViewModel newBook);
+        void DeleteBookById(int bookId);
+        IEnumerable<PersonDTO> GetAllUsers();
+        
     }
 }

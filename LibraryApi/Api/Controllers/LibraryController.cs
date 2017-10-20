@@ -1,4 +1,5 @@
 ﻿using System;
+using LibraryApi.Models.ViewModels;
 using LibraryApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,7 +28,7 @@ namespace LibraryApi.Controllers
             _reviewService = reviewService;
         }
 
-        [HttpGet("")]
+        [HttpGet("books")]
         public IActionResult GetAllBooks()
         {
             var books = _bookService.GetAllBooks();
@@ -35,12 +36,39 @@ namespace LibraryApi.Controllers
             return Ok(books);
         }
 
-        [HttpGet("persons")]
-        public IActionResult GetAllPersons()
+        [HttpGet("books/{bookId}")]
+        public IActionResult GetBookById(int bookId)
         {
-            var persons = _userService.GetAllPersons();
-            return Ok(persons);
+            var book = _bookService.GetBookById(bookId);
+
+            return Ok(book);
         }
+
+        [HttpPost("books")]
+        public IActionResult AddBook([FromBody] BookViewModel newBook)
+        {
+            if(!ModelState.IsValid) {return StatusCode(412);}
+            _bookService.AddBook(newBook);
+
+            return StatusCode(201);
+        }
+
+        [HttpDelete("books/{bookId}")]
+        public IActionResult DeleteBookById(int bookId)
+        {
+            _bookService.DeleteBookById(bookId);
+
+            return StatusCode(204);
+        }
+
+        [HttpGet("persons")]
+        public IActionResult GetAllUsers()
+        {
+            var users = _userService.GetAllUsers();
+            return Ok(users);
+        }
+
+
     }
 
 }
