@@ -1,0 +1,30 @@
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.deps.json
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.dll
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.pdb
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.dll
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.pdb
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.csproj.CoreCompileInputs.cache
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfoInputs.cache
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfo.cs
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.dll
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.pdb
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.deps.json
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.dll
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.pdb
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.dll
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.pdb
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfo.cs
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.dll
+C:\Users\Svanur\Documents\GitHub\HONN2017-Ak\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.pdb
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.dll
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.pdb
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.deps.json
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.dll
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.pdb
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.dll
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.pdb
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.csproj.CoreCompileInputs.cache
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfoInputs.cache
+D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfo.cs
