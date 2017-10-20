@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using LibraryApi.Models.DTOModels;
 using LibraryApi.Models.ViewModels;
+using LibraryApi.Models.Exceptions;
 
 namespace LibraryApi.Repositories
 {
@@ -128,6 +129,9 @@ namespace LibraryApi.Repositories
                             PublishDate = b.PublishDate,
                             ISBN = b.ISBN
                         }).SingleOrDefault();
+
+            if(book == null) {throw new BookNotFoundException("Book not found!");}
+
             return book;
         }
 
@@ -156,6 +160,9 @@ namespace LibraryApi.Repositories
                             PublishDate = b.PublishDate,
                             ISBN = b.ISBN
                         }).SingleOrDefault();
+
+            if(book == null) {throw new BookNotFoundException("Book not found!");}
+
             _db.Remove(book);
             _db.SaveChanges();
         }
@@ -183,6 +190,9 @@ namespace LibraryApi.Repositories
                             Address = u.Address,
                             Email = u.Email
                         }).SingleOrDefault();
+
+            if(user == null) { throw new PersonNotFoundException("User not found");}
+
             return user;
         }
 
@@ -194,6 +204,7 @@ namespace LibraryApi.Repositories
                 Address = newUser.Address,
                 Email = newUser.Email
             };
+
             _db.Add(user);
             _db.SaveChanges();
         }
@@ -209,6 +220,9 @@ namespace LibraryApi.Repositories
                             Address = u.Address,
                             Email = u.Email
                         }).SingleOrDefault();
+
+            if(user == null) { throw new PersonNotFoundException("User not found");}
+
             _db.Remove(user);
             _db.SaveChanges();
         }

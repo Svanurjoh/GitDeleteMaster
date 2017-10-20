@@ -1,4 +1,5 @@
 ﻿using System;
+using LibraryApi.Models.Exceptions;
 using LibraryApi.Models.ViewModels;
 using LibraryApi.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -39,9 +40,15 @@ namespace LibraryApi.Controllers
         [HttpGet("books/{bookId}")]
         public IActionResult GetBookById(int bookId)
         {
-            var book = _bookService.GetBookById(bookId);
-
-            return Ok(book);
+            try
+            {
+                var book = _bookService.GetBookById(bookId);
+                return Ok(book);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
         }
 
         [HttpPost("books")]
@@ -56,9 +63,15 @@ namespace LibraryApi.Controllers
         [HttpDelete("books/{bookId}")]
         public IActionResult DeleteBookById(int bookId)
         {
-            _bookService.DeleteBookById(bookId);
-
-            return StatusCode(204);
+            try
+            {
+                _bookService.DeleteBookById(bookId);
+                return StatusCode(204);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
         }
 
         [HttpGet("users")]
@@ -71,8 +84,15 @@ namespace LibraryApi.Controllers
         [HttpGet("users/{userId}")]
         public IActionResult GetUserById(int userId)
         {
-            var user = _userService.GetUserById(userId);
-            return Ok(user);
+            try
+            {
+                var user = _userService.GetUserById(userId);
+                return Ok(user);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
         }
 
         [HttpPost("users")]
@@ -87,8 +107,15 @@ namespace LibraryApi.Controllers
         [HttpDelete("users/{userId}")]
         public IActionResult DeleteUserById(int userId)
         {
-            _userService.DeleteUserById(userId);
-            return StatusCode(204);
+            try
+            {
+                _userService.DeleteUserById(userId);
+                return StatusCode(204);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }            
         }
     }
 
