@@ -278,11 +278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Models\\Models.csproj",
+      "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\Svanur\\.nuget\\packages\\",
-      "outputPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Models\\obj\\",
+      "outputPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

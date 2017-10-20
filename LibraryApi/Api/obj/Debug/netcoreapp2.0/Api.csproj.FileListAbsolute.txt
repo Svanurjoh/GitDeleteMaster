@@ -46,3 +46,19 @@ D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Api\bin\Debug\netc
 D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.csproj.CoreCompileInputs.cache
 D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfoInputs.cache
 D:\Svanur\HR\5. Önn\Hönnun og smíði\Project\P2\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfo.cs
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Api.deps.json
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Api.runtimeconfig.json
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Api.runtimeconfig.dev.json
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Api.dll
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Api.pdb
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Models.dll
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Repositories.dll
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Services.dll
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Models.pdb
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Services.pdb
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\bin\Debug\netcoreapp2.0\Repositories.pdb
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.csproj.CoreCompileInputs.cache
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfoInputs.cache
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfo.cs
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.dll
+C:\Users\Svanur\GitDeleteMaster\LibraryApi\Api\obj\Debug\netcoreapp2.0\Api.pdb

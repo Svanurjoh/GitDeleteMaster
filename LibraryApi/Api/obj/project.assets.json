@@ -12583,11 +12583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Api\\Api.csproj",
+      "projectUniqueName": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Api\\Api.csproj",
+      "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Api\\Api.csproj",
       "packagesPath": "C:\\Users\\Svanur\\.nuget\\packages\\",
-      "outputPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Api\\obj\\",
+      "outputPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12606,14 +12606,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Models\\Models.csproj": {
-              "projectPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Models\\Models.csproj"
+            "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\Models.csproj"
             },
-            "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Services\\Services.csproj": {
-              "projectPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Services\\Services.csproj"
+            "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Services\\Services.csproj"
             },
-            "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\Svanur\\HR\\5. Önn\\Hönnun og smíði\\Project\\P2\\LibraryApi\\Repositories\\Repositories.csproj"
+            "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Repositories\\Repositories.csproj"
             }
           }
         }
