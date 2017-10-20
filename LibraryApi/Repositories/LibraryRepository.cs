@@ -167,6 +167,23 @@ namespace LibraryApi.Repositories
             _db.SaveChanges();
         }
 
+        public void EditBook(BookViewModel updateBook, int bookId)
+        {
+            var updatedBook = (from b in _db.Books
+                            where b.Id == bookId
+                            select b).SingleOrDefault();
+
+            if(updatedBook == null) {throw new BookNotFoundException("Book not found!");}
+
+            updatedBook.Title = updateBook.Title;
+            updatedBook.AuthorFirstName = updateBook.AuthorFirstName;
+            updatedBook.AuthorLastName = updateBook.AuthorLastName;
+            updatedBook.PublishDate = updateBook.ReleaseDate;
+            updatedBook.ISBN = updateBook.ISBN;
+
+            _db.SaveChanges();
+        }
+
         //Users
 
         public IEnumerable<PersonDTO> GetAllUsers()
@@ -224,6 +241,22 @@ namespace LibraryApi.Repositories
             if(user == null) { throw new PersonNotFoundException("User not found");}
 
             _db.Remove(user);
+            _db.SaveChanges();
+        }
+
+        public void EditUser(PersonViewModel updateUser, int userId)
+        {
+            var updatedUser = (from u in _db.Persons
+                            where u.Id == userId
+                            select u).SingleOrDefault();
+
+            if(updatedUser == null) {throw new PersonNotFoundException("User not found!");}
+
+            updatedUser.FirstName = updateUser.FirstName;
+            updatedUser.LastName = updateUser.LastName;
+            updatedUser.Address = updateUser.Address;
+            updatedUser.Email = updateUser.Email;
+
             _db.SaveChanges();
         }
     }

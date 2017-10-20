@@ -38,5 +38,10 @@ namespace LibraryApi.Services
         {
             _repo.DeleteUserById(userId);
         }
+
+        public void EditUser(PersonViewModel updateUser, int userId)
+        {
+            _repo.EditUser(updateUser, userId);
+        }
     }
 }

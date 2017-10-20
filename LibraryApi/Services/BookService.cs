@@ -39,5 +39,10 @@ namespace LibraryApi.Services
         {
             _repo.DeleteBookById(bookId);
         }
+
+        public void EditBook(BookViewModel updateBook, int bookId)
+        {
+            _repo.EditBook(updateBook, bookId);
+        }
     }
 }

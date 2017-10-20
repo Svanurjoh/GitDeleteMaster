@@ -16,5 +16,7 @@ namespace LibraryApi.Repositories
         PersonDTO GetUserById(int userId);
         void AddUser(PersonViewModel newUser);
         void DeleteUserById(int userId);
+        void EditBook(BookViewModel updateBook, int bookId);
+        void EditUser(PersonViewModel updateUser, int userId);
     }
 }

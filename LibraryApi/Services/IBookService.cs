@@ -12,5 +12,6 @@ namespace LibraryApi.Services
         BookDTO GetBookById(int bookId);
         void AddBook(BookViewModel newBook);
         void DeleteBookById(int bookId);
+        void EditBook(BookViewModel updateBook, int bookId);
     }
 }

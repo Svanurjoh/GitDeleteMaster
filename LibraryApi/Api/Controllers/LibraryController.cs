@@ -74,6 +74,20 @@ namespace LibraryApi.Controllers
             }
         }
 
+        [HttpPut("books/{bookId}")]
+        public IActionResult EditBook([FromBody] BookViewModel updateBook, int bookId)
+        {
+            try
+            {
+                _bookService.EditBook(updateBook, bookId);
+                return StatusCode(204);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
         [HttpGet("users")]
         public IActionResult GetAllUsers()
         {
@@ -116,6 +130,20 @@ namespace LibraryApi.Controllers
             {
                 return NotFound(msg);
             }            
+        }
+
+        [HttpPut("users/{userId}")]
+        public IActionResult EditUser([FromBody] PersonViewModel updateUser, int userId)
+        {
+            try
+            {
+                _userService.EditUser(updateUser, userId);
+                return StatusCode(204);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
         }
     }
 
