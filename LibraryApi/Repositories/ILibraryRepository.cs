@@ -13,6 +13,8 @@ namespace LibraryApi.Repositories
         void AddBook(BookViewModel newBook);
         void DeleteBookById(int bookId);
         IEnumerable<PersonDTO> GetAllUsers();
-        
+        PersonDTO GetUserById(int userId);
+        void AddUser(PersonViewModel newUser);
+        void DeleteUserById(int userId);
     }
 }

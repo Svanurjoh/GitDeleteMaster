@@ -164,13 +164,53 @@ namespace LibraryApi.Repositories
 
         public IEnumerable<PersonDTO> GetAllUsers()
         {
-            var persons = (from p in _db.Persons
+            var users = (from u in _db.Persons
                            select new PersonDTO{
-                            FirstName = p.FirstName,
-                            LastName = p.LastName,
-                            Address = p.Address,
-                            Email = p.Email}).ToList();
-            return persons;
+                            FirstName = u.FirstName,
+                            LastName = u.LastName,
+                            Address = u.Address,
+                            Email = u.Email}).ToList();
+            return users;
+        }
+
+        public PersonDTO GetUserById(int userId)
+        {
+            var user = (from u in _db.Persons
+                        where userId == u.Id
+                        select new PersonDTO{
+                            FirstName = u.FirstName,
+                            LastName = u.LastName,
+                            Address = u.Address,
+                            Email = u.Email
+                        }).SingleOrDefault();
+            return user;
+        }
+
+        public void AddUser(PersonViewModel newUser)
+        {
+            var user = new Person{
+                FirstName = newUser.FirstName,
+                LastName = newUser.LastName,
+                Address = newUser.Address,
+                Email = newUser.Email
+            };
+            _db.Add(user);
+            _db.SaveChanges();
+        }
+
+        public void DeleteUserById(int userId)
+        {
+            var user = (from u in _db.Persons
+                        where userId == u.Id
+                        select new Person{
+                            Id = u.Id,
+                            FirstName = u.FirstName,
+                            LastName = u.LastName,
+                            Address = u.Address,
+                            Email = u.Email
+                        }).SingleOrDefault();
+            _db.Remove(user);
+            _db.SaveChanges();
         }
     }
 }

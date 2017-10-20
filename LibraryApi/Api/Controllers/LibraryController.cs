@@ -47,7 +47,7 @@ namespace LibraryApi.Controllers
         [HttpPost("books")]
         public IActionResult AddBook([FromBody] BookViewModel newBook)
         {
-            if(!ModelState.IsValid) {return StatusCode(412);}
+            if(!ModelState.IsValid) { return StatusCode(412); }
             _bookService.AddBook(newBook);
 
             return StatusCode(201);
@@ -61,14 +61,35 @@ namespace LibraryApi.Controllers
             return StatusCode(204);
         }
 
-        [HttpGet("persons")]
+        [HttpGet("users")]
         public IActionResult GetAllUsers()
         {
             var users = _userService.GetAllUsers();
             return Ok(users);
         }
 
+        [HttpGet("users/{userId}")]
+        public IActionResult GetUserById(int userId)
+        {
+            var user = _userService.GetUserById(userId);
+            return Ok(user);
+        }
 
+        [HttpPost("users")]
+        public IActionResult AddUser([FromBody] PersonViewModel newUser)
+        {
+            if(!ModelState.IsValid) { return StatusCode(204); }
+            _userService.AddUser(newUser);
+            
+            return StatusCode(201);
+        }
+
+        [HttpDelete("users/{userId}")]
+        public IActionResult DeleteUserById(int userId)
+        {
+            _userService.DeleteUserById(userId);
+            return StatusCode(204);
+        }
     }
 
 }
