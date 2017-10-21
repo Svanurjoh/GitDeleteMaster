@@ -44,5 +44,25 @@ namespace LibraryApi.Services
         {
             _repo.EditBook(updateBook, bookId);
         }
+
+        public IEnumerable<BookDTO> GetBooksOnLoadForUser(int userId)
+        {
+            return _repo.GetBooksOnLoadForUser(userId);
+        }
+
+        public void AddNewLoan(int userId, int bookId)
+        {
+            _repo.AddNewLoan(userId, bookId);
+        }
+
+        public void DeleteLoan(int userId, int bookId)
+        {
+            _repo.DeleteLoan(userId, bookId);
+        }
+
+        public void ExtendLoanOnBook(int userId, int bookId)
+        {
+            _repo.ExtendLoanOnBook(userId, bookId);
+        }
     }
 }

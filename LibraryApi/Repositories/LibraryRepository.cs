@@ -161,7 +161,7 @@ namespace LibraryApi.Repositories
                             ISBN = b.ISBN
                         }).SingleOrDefault();
 
-            if(book == null) {throw new BookNotFoundException("Book not found!");}
+            if(book == null) { throw new BookNotFoundException("Book not found!"); }
 
             _db.Remove(book);
             _db.SaveChanges();
@@ -173,7 +173,7 @@ namespace LibraryApi.Repositories
                             where b.Id == bookId
                             select b).SingleOrDefault();
 
-            if(updatedBook == null) {throw new BookNotFoundException("Book not found!");}
+            if(updatedBook == null) { throw new BookNotFoundException("Book not found!"); }
 
             updatedBook.Title = updateBook.Title;
             updatedBook.AuthorFirstName = updateBook.AuthorFirstName;
@@ -208,7 +208,7 @@ namespace LibraryApi.Repositories
                             Email = u.Email
                         }).SingleOrDefault();
 
-            if(user == null) { throw new PersonNotFoundException("User not found");}
+            if(user == null) { throw new PersonNotFoundException("User not found"); }
 
             return user;
         }
@@ -238,7 +238,7 @@ namespace LibraryApi.Repositories
                             Email = u.Email
                         }).SingleOrDefault();
 
-            if(user == null) { throw new PersonNotFoundException("User not found");}
+            if(user == null) { throw new PersonNotFoundException("User not found"); }
 
             _db.Remove(user);
             _db.SaveChanges();
@@ -250,7 +250,7 @@ namespace LibraryApi.Repositories
                             where u.Id == userId
                             select u).SingleOrDefault();
 
-            if(updatedUser == null) {throw new PersonNotFoundException("User not found!");}
+            if(updatedUser == null) { throw new PersonNotFoundException("User not found!"); }
 
             updatedUser.FirstName = updateUser.FirstName;
             updatedUser.LastName = updateUser.LastName;
@@ -258,6 +258,97 @@ namespace LibraryApi.Repositories
             updatedUser.Email = updateUser.Email;
 
             _db.SaveChanges();
+        }
+
+        public IEnumerable<BookDTO> GetBooksOnLoadForUser(int userId)
+        {
+            var booksOnLoan = (from u in _db.Persons
+                               join l in _db.Loans on u.Id equals l.PersonId
+                               where userId == l.PersonId
+                               join b in _db.Books on l.BookId equals b.Id
+                               select new BookDTO {
+                                   Title = b.Title,
+                                   AuthorFirstName = b.AuthorFirstName,
+                                   AuthorLastName = b.AuthorLastName,
+                                   PublishDate = b.PublishDate,
+                                   ISBN = b.ISBN
+                               }).ToList();
+
+            if(booksOnLoan == null) { throw new PersonNotFoundException("Persons doesn't exist or has no books on loan!"); }
+
+            return booksOnLoan;
+        }
+
+        public void AddNewLoan(int userId, int bookId)
+        {
+            var user = GetUserById(userId);
+            if(user == null) { throw new PersonNotFoundException("User not found"); }
+
+            var book = GetBookById(bookId);
+            if(book == null) { throw new BookNotFoundException("Book not found"); }
+
+            var loan = new Loans {
+                PersonId = userId,
+                BookId = bookId,
+                LoanedAt = DateTime.Now
+            };
+
+            _db.Add(loan);
+            _db.SaveChanges();
+        }
+
+        public void DeleteLoan(int userId, int bookId)
+        {
+            var user = GetUserById(userId);
+            if(user == null) { throw new PersonNotFoundException("User not found"); }
+
+            var book = GetBookById(bookId);
+            if(book == null) { throw new BookNotFoundException("Book not found"); }
+
+            var loan = (from l in _db.Loans
+                        where userId == l.PersonId
+                        && bookId == l.BookId
+                        select l).SingleOrDefault();
+
+            if(loan == null) { throw new LoanNotFoundException("User doesn't have this book on loan"); }
+
+            _db.Remove(loan);
+            _db.SaveChanges();
+        }
+
+        public void ExtendLoanOnBook(int userId, int bookId)
+        {
+            var user = GetUserById(userId);
+            if(user == null) { throw new PersonNotFoundException("User not found"); }
+
+            var book = GetBookById(bookId);
+            if(book == null) { throw new BookNotFoundException("Book not found"); }
+
+            var loan = (from l in _db.Loans
+                        where userId == l.PersonId
+                        && bookId == l.BookId
+                        select l).SingleOrDefault();
+
+            if(loan == null) { throw new LoanNotFoundException("User doesn't have this book on loan"); }
+
+            loan.LoanedAt = DateTime.Now;
+
+            _db.SaveChanges();
+            //GetLoans(userId, bookId);
+        }
+        
+        //Test fall. Ma deletea
+        public void GetLoans(int userId, int bookId)
+        {
+            var loan = (from l in _db.Loans
+                        where userId == l.PersonId
+                        && bookId == l.BookId
+                        select l).ToList();
+
+            foreach(var l in loan)
+            {
+                Console.WriteLine(l.LoanedAt);
+            }
         }
     }
 }

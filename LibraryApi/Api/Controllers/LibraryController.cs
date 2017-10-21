@@ -145,6 +145,261 @@ namespace LibraryApi.Controllers
                 return NotFound(msg);
             }
         }
-    }
 
+        [HttpGet("users/{userId}/books")]
+        public IActionResult GetUserBooks(int userId)
+        {
+            try
+            {
+                var user = _bookService.GetBooksOnLoadForUser(userId);
+                return Ok(user);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpPost("users/{userId}/books/{bookId}")]
+        public IActionResult AddNewLoanToUser(int userId, int bookId)
+        {
+            try
+            {
+                _bookService.AddNewLoan(userId, bookId);
+                return StatusCode(201);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpDelete("users/{userId}/books/{bookId}")]
+        public IActionResult ReturnUsersBook(int userId, int bookId)
+        {
+            try
+            {
+                _bookService.DeleteLoan(userId, bookId);
+                return StatusCode(204);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(LoanNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpPut("users/{userId}/books/{bookId}")]
+        public IActionResult UpdateBookLoanInformation(int userId, int bookId)
+        {
+            try
+            {
+                _bookService.ExtendLoanOnBook(userId, bookId);
+                return StatusCode(200);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(LoanNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        /*[HttpGet("users/{userId}/reviews")]
+        public IActionResult GetUserReviews(int userId)
+        {
+            try
+            {
+                var userReviews = _reviewService.GetUserReviews(userId);
+                return Ok(userReviews);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpGet("users/{userId}/reviews/{bookId}")]
+        public IActionResult GetBookReview(int userId, int bookId)
+        {
+            try
+            {
+                var bookReview = _reviewService.GetBookReview(userId, bookId);
+                return Ok(bookReview);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpPost("users/{userId}/reviews/{bookId}")]
+        public IActionResult AddNewReview(int userId, int bookId)
+        {
+            try
+            {
+                _reviewService.AddNewReview(userId, bookId);
+                return StatusCode(201);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpDelete("users/{userId}/reviews/{bookId}")]
+        public IActionResult RemoveReviewFromBook(int userId, int bookId)
+        {
+            try
+            {
+                _reviewService.RemoveReviewFromBook(userId, bookId);
+                return StatusCode(204);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpPut("users/{userId}/reviews/{bookId}")]
+        public IActionResult UpdateBookReview(int userId, int bookId)
+        {
+            try
+            {
+                _reviewService.UpdateBookReview(userId, bookId);
+                return StatusCode(200);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpGet("users/{userId}/recommendation")]
+        public IActionResult GetBooksRecommendation(int userId)
+        {
+            try
+            {
+                var books = _recommendationService.GetBooksRecommendation(userId);
+                return Ok(books);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpGet("books/reviews")]
+        public IActionResult GetAllReviews()
+        {
+            var reviews = _reviewService.GetAllReviews();
+
+            return Ok(reviews);
+        }
+
+        [HttpGet("books/{bookId}/reviews")]
+        public IActionResult GetAllReviewsForBook(int bookId)
+        {
+            try
+            {
+                var bookReviews = _reviewService.GetAllReviewsForBook(bookId);
+                
+                return Ok(bookReviews);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpGet("books/{bookId}/reviews/{userId}")]
+        public IActionResult GetUserReviewOfBook(int bookId, int userId)
+        {
+            try
+            {
+                var userReviews = _reviewService.GetUserReviewOfBook(bookId, userId);
+                
+                return Ok(userReviews);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpPut("books/{bookId}/reviews/{userId}")]
+        public IActionResult UpdateUserReviewOfBook(int bookId, int userId)
+        {
+            try
+            {
+                _reviewService.UpdateUserReviewOfBook(bookId, userId);
+                
+                return StatusCode(201);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }
+
+        [HttpDelete("books/{bookId}/reviews/{userId}")]
+        public IActionResult RemoveUserReviewOfBook(int bookId, int userId)
+        {
+            try
+            {
+                _reviewService.RemoveUserReviewOfBook(bookId, userId);
+                
+                return StatusCode(204);
+            }
+            catch(PersonNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+            catch(BookNotFoundException msg)
+            {
+                return NotFound(msg);
+            }
+        }*/
+    }
 }

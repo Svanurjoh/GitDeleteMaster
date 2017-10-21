@@ -13,5 +13,9 @@ namespace LibraryApi.Services
         void AddBook(BookViewModel newBook);
         void DeleteBookById(int bookId);
         void EditBook(BookViewModel updateBook, int bookId);
+        IEnumerable<BookDTO> GetBooksOnLoadForUser(int userId);
+        void AddNewLoan(int userId, int bookId);
+        void DeleteLoan(int userId, int bookId);
+        void ExtendLoanOnBook(int userId, int bookId);
     }
 }
