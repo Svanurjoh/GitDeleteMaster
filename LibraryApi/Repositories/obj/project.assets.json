@@ -3864,11 +3864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\Svanur\\Desktop\\vs\\LibraryApi\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Repositories\\Repositories.csproj",
+      "projectPath": "C:\\Users\\Svanur\\Desktop\\vs\\LibraryApi\\Repositories\\Repositories.csproj",
       "packagesPath": "C:\\Users\\Svanur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Repositories\\obj\\",
+      "outputPath": "C:\\Users\\Svanur\\Desktop\\vs\\LibraryApi\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3887,8 +3887,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\Svanur\\GitDeleteMaster\\LibraryApi\\Models\\Models.csproj"
+            "C:\\Users\\Svanur\\Desktop\\vs\\LibraryApi\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Svanur\\Desktop\\vs\\LibraryApi\\Models\\Models.csproj"
             }
           }
         }

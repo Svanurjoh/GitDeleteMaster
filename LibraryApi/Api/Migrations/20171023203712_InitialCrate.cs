@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Api.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialCrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

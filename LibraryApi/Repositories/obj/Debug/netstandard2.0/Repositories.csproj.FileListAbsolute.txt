@@ -38,3 +38,13 @@ C:\Users\Svanur\GitDeleteMaster\LibraryApi\Repositories\obj\Debug\netstandard2.0
 C:\Users\Svanur\GitDeleteMaster\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfo.cs
 C:\Users\Svanur\GitDeleteMaster\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.dll
 C:\Users\Svanur\GitDeleteMaster\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.pdb
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.deps.json
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.dll
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\bin\Debug\netstandard2.0\Repositories.pdb
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.dll
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\bin\Debug\netstandard2.0\Models.pdb
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.AssemblyInfo.cs
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.dll
+C:\Users\Svanur\Desktop\vs\LibraryApi\Repositories\obj\Debug\netstandard2.0\Repositories.pdb
