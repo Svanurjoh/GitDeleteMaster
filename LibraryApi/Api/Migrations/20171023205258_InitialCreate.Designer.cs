@@ -11,8 +11,8 @@ using System;
 namespace Api.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20171023203712_InitialCrate")]
-    partial class InitialCrate
+    [Migration("20171023205258_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,6 +74,24 @@ namespace Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("LibraryApi.Models.EntityModels.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BookId");
+
+                    b.Property<int>("PersonId");
+
+                    b.Property<string>("ShortReview");
+
+                    b.Property<int>("Stars");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("LibraryApi.Models.EntityModels.Loans", b =>

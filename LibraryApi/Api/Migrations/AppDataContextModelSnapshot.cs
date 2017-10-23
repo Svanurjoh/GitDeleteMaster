@@ -75,6 +75,24 @@ namespace Api.Migrations
                     b.ToTable("Persons");
                 });
 
+            modelBuilder.Entity("LibraryApi.Models.EntityModels.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BookId");
+
+                    b.Property<int>("PersonId");
+
+                    b.Property<string>("ShortReview");
+
+                    b.Property<int>("Stars");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("LibraryApi.Models.EntityModels.Loans", b =>
                 {
                     b.HasOne("LibraryApi.Models.EntityModels.Person")
